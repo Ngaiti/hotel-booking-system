@@ -44,7 +44,7 @@ export default function AuthPage() {
 
 		if (!username || !password) {
 			setAlertVariant("danger");
-			setAlertMessage("Please fill in the blank.");
+			setAlertMessage("Please enter your username and password.");
 			return;
 		}
 
@@ -122,6 +122,16 @@ export default function AuthPage() {
 					centered
 				>
 					<Modal.Body>
+						<i
+							className="bi bi-person-fill"
+							style={{
+								fontSize: 80,
+								color: "dodgerblue",
+								display: "flex",
+								justifyContent: "center",
+							}}
+						></i>
+
 						<h2
 							className="mb-4"
 							style={{ fontWeight: "bold", textAlign: "center" }}

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AuthPage from "./pages/AuthPage";
 import BookingsPage from "./pages/BookingsPage";
 import AddBookingPage from "./pages/AddBookingPage";
+import WeatherPage from "./pages/WeatherPage";
 import { AuthProvider } from "./components/AuthProvider";
 import {
 	fetchBookings,
@@ -76,6 +77,7 @@ function App() {
 							path="/add-booking"
 							element={<AddBookingPage onCreate={handleCreate} />}
 						/>
+						<Route path="/weather" element={<WeatherPage />} />
 						<Route path="/login" element={<AuthPage />} />
 						<Route path="*" element={<AuthPage />} />
 					</Routes>
