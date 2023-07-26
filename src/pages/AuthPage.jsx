@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function AuthPage() {
 	const loginImage =
-		"https://media.cnn.com/api/v1/images/stellar/prod/140127103345-peninsula-shanghai-deluxe-mock-up.jpg?q=w_2226,h_1449,x_0,y_0,c_fill";
+		"https://cdn.kiwicollection.com/media/property/PR006778/xl/006778-01-Deluxe%20River%20Room-The%20Peninsula%20Shanghai.jpg?cb=1575478731";
 	const [modalShow, setModalShow] = useState(null);
 	const handleShowSignUp = () => setModalShow("signup");
 	const handleShowLogin = () => setModalShow("login");
@@ -74,13 +74,13 @@ export default function AuthPage() {
 					className="mt-5"
 					style={{ fontSize: 64, fontWeight: "bold" }}
 				>
-					Hotel Booking System
+					Peninsula Shanghai
 				</p>
 				<h2
 					className="my-5"
 					style={{ fontSize: 31, fontWeight: "bold" }}
 				>
-					🛏️ Book Your Room With Us!
+					🛏️ Book Your Preferred Room Now!
 				</h2>
 				<Col sm={5} className="d-grid gap-2">
 					<Button

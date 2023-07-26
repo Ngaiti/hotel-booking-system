@@ -1,9 +1,10 @@
 import { getAuth } from "firebase/auth";
 import { useContext, useEffect } from "react";
-import { Navbar, Container, Button } from "react-bootstrap";
-import { useNavigate, Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import BookingForm from "../components/BookingForm";
 import { AuthContext } from "../components/AuthProvider";
+import NavigationBar from "../components/NavigationBar";
 
 function AddBookingPage({ onCreate }) {
 	const auth = getAuth();
@@ -25,37 +26,7 @@ function AddBookingPage({ onCreate }) {
 
 	return (
 		<div className="add-booking-page">
-			<Navbar bg="primary" variant="dark">
-				<Container>
-					<Navbar.Brand>
-						<Link to="/bookings">
-							<i
-								className="bi bi-building-fill"
-								style={{ fontSize: 30, color: "white" }}
-							></i>
-						</Link>
-					</Navbar.Brand>
-					<Navbar.Collapse className="justify-content-end">
-						<Link
-							to="/weather"
-							className="nav-link text-white me-5"
-							style={{ fontSize: "17px" }}
-						>
-							<i className="bi bi-cloud-sun-fill"></i> Weather
-						</Link>
-						<Link
-							to="/add-booking"
-							className="nav-link text-white me-5"
-							style={{ fontSize: "17px" }}
-						>
-							Add Booking
-						</Link>
-						<Button variant="danger" onClick={handleLogout}>
-							<i className="bi bi-box-arrow-right"></i>
-						</Button>
-					</Navbar.Collapse>
-				</Container>
-			</Navbar>
+			<NavigationBar handleLogout={handleLogout} />
 
 			<Container className="mt-3 text-center">
 				<BookingForm onCreate={onCreate} />
