@@ -1,8 +1,8 @@
 import { getAuth } from "firebase/auth";
 import { useState, useContext, useEffect } from "react";
-import { Navbar, Container, Button } from "react-bootstrap";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../components/AuthProvider";
+import NavigationBar from "../components/NavigationBar";
 
 const api = {
 	key: "4f8e795dcd6dbf7b9f5276bff095ffc1",
@@ -94,37 +94,8 @@ function WeatherPage() {
 					: "app"
 			}
 		>
-			<Navbar bg="primary" variant="dark">
-				<Container>
-					<Navbar.Brand>
-						<Link to="/bookings">
-							<i
-								className="bi bi-building-fill"
-								style={{ fontSize: 30, color: "white" }}
-							></i>
-						</Link>
-					</Navbar.Brand>
-					<Navbar.Collapse className="justify-content-end">
-						<Link
-							to="/weather"
-							className="nav-link text-white me-5"
-							style={{ fontSize: "17px" }}
-						>
-							<i className="bi bi-cloud-sun-fill"></i> Weather
-						</Link>
-						<Link
-							to="/add-booking"
-							className="nav-link text-white me-5"
-							style={{ fontSize: "17px" }}
-						>
-							Add Booking
-						</Link>
-						<Button variant="danger" onClick={handleLogout}>
-							<i className="bi bi-box-arrow-right"></i>
-						</Button>
-					</Navbar.Collapse>
-				</Container>
-			</Navbar>
+			<NavigationBar handleLogout={handleLogout} />
+
 			<main>
 				<div className="search-box">
 					<input
@@ -132,6 +103,7 @@ function WeatherPage() {
 						className="search-bar"
 						onChange={(e) => setQuery(e.target.value)}
 						value={query}
+						placeholder="Search for a Location..."
 						onKeyPress={search}
 					/>
 				</div>

@@ -4,6 +4,7 @@ import AuthPage from "./pages/AuthPage";
 import BookingsPage from "./pages/BookingsPage";
 import AddBookingPage from "./pages/AddBookingPage";
 import WeatherPage from "./pages/WeatherPage";
+import FileUploadPage from "./pages/FileUploadPage";
 import { AuthProvider } from "./components/AuthProvider";
 import {
 	fetchBookings,
@@ -76,6 +77,10 @@ function App() {
 						<Route
 							path="/add-booking"
 							element={<AddBookingPage onCreate={handleCreate} />}
+						/>
+						<Route
+							path="/file-upload"
+							element={<FileUploadPage />}
 						/>
 						<Route path="/weather" element={<WeatherPage />} />
 						<Route path="/login" element={<AuthPage />} />
