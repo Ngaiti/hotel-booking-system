@@ -62,7 +62,7 @@ export default function AuthPage() {
 	return (
 		<Row>
 			<Col sm={6}>
-				<Image src={loginImage} style={{ height: "120%" }} fluid />
+				<Image src={loginImage} style={{ minHeight: "100vh" }} fluid />
 			</Col>
 			<Col sm={6} className="p-4">
 				<i

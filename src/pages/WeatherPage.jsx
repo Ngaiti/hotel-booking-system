@@ -103,7 +103,7 @@ function WeatherPage() {
 						className="search-bar"
 						onChange={(e) => setQuery(e.target.value)}
 						value={query}
-						placeholder="Enter Location"
+						placeholder="Search for a Location..."
 						onKeyPress={search}
 					/>
 				</div>
